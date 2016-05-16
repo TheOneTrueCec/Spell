@@ -40,8 +40,10 @@ listener.register_combo({
 listener.register_combo({
     "keys": "1",
     "on_keydown": function() {
+        if (player.skillpoints > 0 ) {
         player.maxHealth = Math.ceil(player.maxHealth * 1.10);
         player.skillpoints--;
+        }
     },
 });
 listener.register_combo({
